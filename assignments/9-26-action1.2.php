@@ -76,7 +76,7 @@ if($_POST['search'] !=NULL)
    }
    
     echo "<br/>";
-  	$NumberOfMajor = array("Digital Media="=> 0, "Security"=>0, "Other"=>0);
+  	$NumberOfMajor = array("Digital Media="=> 0, "Security"=>1, "Other"=>2);
     $Total = 0;
     
     for($i=0;$i<count($studentList);$i++)
@@ -95,7 +95,7 @@ if($_POST['search'] !=NULL)
 */
    }
    $percent =$NumberOfMajor["Digital Media"]/$Total*100;
-   printf( "Digital Media: %.2f%% <br/>",$NumberOfMajor["Digital Media"]/$Total*100);
+   printf( "Digital Media: %.2f%% <br/>",$percent);
    echo"<progress value= $percent max='100'> </progress>";
 }
 ?>
